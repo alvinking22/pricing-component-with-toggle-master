@@ -1,0 +1,276 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 40px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  background: hsl(240, 78%, 95%);
+  color: hsl(232, 13%, 33%);
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 15px;
+  text-align: center;
+}
+h2,
+h3,
+li {
+  margin: 10px 0px;
+}
+
+.bg-top {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: -50%;
+  top: -5%;
+  z-index: -1;
+}
+.bg-bottom {
+  display: none;
+}
+.title {
+  margin: 40px 0;
+  font-size: 18px;
+}
+
+.subtitle {
+  margin: 20px;
+  margin-bottom: 50px;
+  font-size: 12px;
+  color: hsla(233, 5%, 64%, 0.712);
+}
+
+li {
+  list-style: none;
+  margin: 15px 0;
+}
+
+hr {
+  width: 85%;
+  margin: 0 auto;
+  border: 0.5px solid hsl(234, 14%, 74%);
+}
+
+.price-table {
+  display: inline-block;
+  justify-content: center;
+}
+
+.price-table .prices {
+  font-size: 62px;
+  padding-bottom: 5px;
+  margin: 20px;
+}
+
+.table {
+  width: 300px;
+  margin: 20px 0;
+  padding: 10px;
+  background: hsl(240, 78%, 98%);
+  justify-content: center;
+  border-radius: 5px;
+}
+.table .learn-more {
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  border-radius: 5px;
+  color: hsl(240, 78%, 98%);
+  padding: 10px 5px;
+  margin: 20px;
+  border: 1px solid;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.table .learn-more:hover {
+  background: hsl(240, 78%, 98%);
+  color: hsl(237, 63%, 64%);
+  border: 1px solid hsl(237, 63%, 64%);
+}
+
+/* 
+*Highlight Table 
+*/
+
+.professional {
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  color: hsl(240, 78%, 98%);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.professional .learn-more {
+  background: hsl(240, 78%, 98%);
+  color: hsl(237, 63%, 64%);
+  border: 1px solid hsl(240, 78%, 98%);
+}
+.professional .learn-more:hover {
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  color: hsl(240, 78%, 98%);
+  border: 1px solid hsl(240, 78%, 98%);
+}
+
+@media (min-width: 900px) {
+  body {
+    justify-content: center;
+  }
+
+  .bg-top {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  .bg-bottom {
+    display: initial;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .price-table {
+    display: flex;
+    justify-content: center;
+  }
+
+  .professional {
+    margin: 0;
+    padding: 30px 10px;
+  }
+}
+
+/* Slider */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+}
+
+input:focus + .slider {
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 26px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.unactive {
+  display: none;
+}
+
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%)
+
+### Neutral
+
+- Very Light Grayish Blue: hsl(240, 78%, 98%)
+- Light Grayish Blue: hsl(234, 14%, 74%)
+- Grayish Blue: hsl(233, 13%, 49%)
+- Dark Grayish Blue: hsl(232, 13%, 33%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weight: 700 */
